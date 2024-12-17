@@ -207,7 +207,7 @@ const remeras = [
     {id:3,color:"negro"},
 ]
 
-for(const productos of remeras){
-    console.log(productos.color)
+for(const i of remeras){
+    console.log(i.color)
 
 }
