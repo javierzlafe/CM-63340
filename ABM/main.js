@@ -21,6 +21,22 @@ let producto7  = new Producto("xiaomi",1650000,14)
 
 let lista = [producto1,producto2,producto3,producto4,producto5,producto6,producto7]
 
+
+
+function filtrarProducto(){
+    let palabraClave = prompt("ingresa el producto que buscas")
+    let resultado = lista.filter( (x)=>x.nombre.toUpperCase().includes(palabraClave))
+
+    if (resultado.length >0){
+        console.table(resultado)
+    }else{
+        alert("no se encontro")
+    }
+}
+
+
+
+
 function agregarProducto(){
 let nombre= prompt("ingresa el nombre del producto")
 let precio = prompt("ingresa el precio del producto")
@@ -32,5 +48,17 @@ if(isNaN(precio) || isNaN(stock) || nombre == ""){
 }
 let producto = new Producto (nombre,precio,stock)
 lista.push(producto)
-console.table(lista)
+console.log(lista)
 }
+
+
+
+
+
+//BOTONERA
+
+let agregar = document.getElementById("agregar")
+agregar.addEventListener("click",agregarProducto )
+
+let filtrar = document.getElementById("filtrar")
+filtrar.addEventListener("click", filtrarProducto)
