@@ -19,7 +19,7 @@ let producto5  = new Producto("galaxy s24",1650000,23)
 let producto6  = new Producto("smartwatch",1650000,65)
 let producto7  = new Producto("xiaomi",1650000,14)
 
-let lista = [producto1,producto2,producto3,producto4,producto5,producto6,producto7]
+ 
 
 
 
